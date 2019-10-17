@@ -1,0 +1,362 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END MEYERWEB RESET @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+
+/* Default view no breakpoint	Mobile-portrait   works on iphoneX (375x812) */
+
+/* Here set the documents root font-size for use with rem units (% relative to this set size) on text nodes */
+:root{
+	font-size: 10px;
+	/* background-color: rgb(223, 233, 238); */
+}
+
+/* If you set box-sizing: border-box; on an element padding and border (but not margin) are included in the width and height */
+*{
+	box-sizing: border-box;
+}
+
+#backboard{
+	width: 100vw;
+	height: 100vh;
+
+	background-image: url("backboardraster.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#contents{
+	/* tracer here */
+	/* background-color: beige; */
+
+
+	height: 100vh;
+	margin:0rem 1.6rem 0rem 1.6rem ;
+	padding: .5rem;	
+	display: grid;
+	grid: 1.8fr 1.0fr 1fr 2fr/1fr;
+}
+
+.logoimage{
+	margin: auto;
+	max-width: 90%;	
+	max-height: 100%;
+	border-radius: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	object-fit: contain;
+}
+#logodiv{
+	/* background-color: rgb(231, 231, 77); */
+	display: grid;
+	place-items: center;
+}
+#openerdiv{
+	/* background-color: rgb(71, 140, 219); */
+
+	display: grid;
+	grid: 1fr 1fr/1fr;	
+
+	font-family: Russo One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.8rem;	
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.openertop{
+	display: grid;
+	place-items: end center;
+}
+
+.openerbottom{
+	display: grid;
+	place-items: start center;
+	animation: appear 4s ease-in 1s 1 normal both;
+}
+
+@keyframes appear{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 100%;
+	}
+}
+
+#preamblediv{
+	/* background-color: rgb(187, 105, 37); */
+	font-family: Rhodium Libre;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.6rem;
+	line-height: 1.4;
+	color: #FFFFFF;
+
+	display: grid;
+	place-items: center left;
+}
+
+p{
+	margin-bottom: 2rem;
+}
+
+#buttonsdiv{
+	/* background-color: rgb(14, 124, 56); */
+	display: grid;
+	place-items: center;
+	
+}
+  
+.fpbutton{	
+	background: #FFFFFF;
+	box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
+	padding: 1rem 1rem 1rem 1rem;
+
+	box-sizing: content-box;
+	width: 80vw;
+
+	text-decoration: none;
+	font-family: Russo One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.9rem;	
+	text-align: center;
+	color: #000000;	
+	/* cursor: pointer;	 this is good but not on mobile */
+}
+
+
+
+
+/* begin responsive breakpoint adjusts  PORTRAIT M-O-B-I-L-E (max-width:450px)  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+/* adjust grid for w320 and h568   this is 5s */
+@media screen and (max-width:450px) and (max-height:570px){
+	
+	#contents{
+		/* tracer here */
+		/* background-color: rgb(218, 67, 210); */
+
+		height: 100%;
+		margin:0rem 1.6rem 0rem 1.6rem ;
+		padding: .5rem;	
+		display: grid;
+		grid: 1.5fr 0.4fr 1.3fr 1.4fr/1fr;
+	}
+	#backboard{
+		/* maybe adjust height to accomodate tiny screens match the contents height */
+		height: 100vh;	
+	}
+	#openerdiv{
+		/* text size adjust */	
+		font-size: 1.6rem;			
+	}
+	#preamblediv{
+		/* text size adjust */		
+		font-size: 1.4rem;
+		line-height: 1.0;		
+	}
+	p{
+		/* space adjust between paragraphs */
+		margin-bottom: .5rem;
+	}	
+	.fpbutton{			
+		/* text size adjust */
+		padding: 1rem 1rem 1rem 1rem;	
+		font-size: 1.6rem;			
+	}
+	
+}
+
+
+
+/* adjust grid for portrait mobiles height 571px-750px pixel   this is iphone 6/7/8*   6/7/8+  */
+@media screen and (max-width:450px) and  (min-height:571px) and (max-height:750px){
+	#contents{
+		/* tracer here */
+		/* background-color: rgb(218, 67, 210); */
+
+		height: 100%;
+		margin:0rem 1.6rem 0rem 1.6rem ;
+		padding: .5rem;	
+		display: grid;
+		grid: 1.5fr 0.2fr 1.2fr 1.6fr/1fr;
+	}
+	#backboard{
+		/* maybe adjust height to accomodate tiny screens match the contents height */
+		height: 100vh;	
+	}
+	#openerdiv{
+		/* text size adjust */	
+		font-size: 2rem;			
+	}
+	#preamblediv{
+		/* text size adjust */		
+		font-size: 1.6rem;
+		line-height: 1.0;		
+	}
+	p{
+		/* space adjust between paragraphs */
+		margin-bottom: .5rem;
+	}	
+	.fpbutton{			
+		/* text size adjust */
+		padding: 1rem 1rem 1rem 1rem;	
+		font-size: 1.9rem;			
+	}
+
+}
+
+/* adjust grid for portrait mobiles height >= 751px iphoneX, pixel phones etc */
+@media screen and (max-width:450px) and  (min-height:751px) {
+	#contents{
+		/* tracer here */
+		/* background-color: rgb(218, 67, 210); */
+
+		height: 100%;
+		margin:0rem 1.6rem 0rem 1.6rem ;
+		padding: .5rem;	
+		display: grid;
+		grid: 1.2fr 0.3fr 1.3fr 1.6fr/1fr;
+	}
+	#backboard{
+		/* maybe adjust height to accomodate tiny screens match the contents height */
+		height: 100vh;	
+	}
+	#openerdiv{
+		/* text size adjust */	
+		font-size: 2rem;			
+	}
+	#preamblediv{
+		/* text size adjust */		
+		font-size: 1.8rem;
+		line-height: 1.0;		
+	}
+	p{
+		/* space adjust between paragraphs */
+		margin-bottom: .9rem;
+	}	
+	.fpbutton{			
+		/* text size adjust */
+		padding: 1rem 1rem 1rem 1rem;	
+		font-size: 1.9rem;			
+	}
+
+}
+
+/* begin responsive breakpoint adjusts  LANDSCAPE M-O-B-I-L-E (max-width:750px)  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+@media screen and (max-height:800px) and (orientation:landscape){
+	#contents{
+		/* tracer here */
+		/* background-color: rgb(16, 214, 115); */
+
+		height: 100%;
+		margin:0rem 1.6rem 0rem 1.6rem ;
+		padding: .5rem;	
+		display: grid;
+		grid: 1.2fr 0.3fr 1.3fr 1.6fr/1fr;
+	}
+	#backboard{
+		/* maybe adjust height to accomodate tiny screens match the contents height */
+		height: 200vh;	
+	}
+	#openerdiv{
+		/* text size adjust */	
+		font-size: 2rem;			
+	}
+	#preamblediv{
+		/* text size adjust */		
+		font-size: 1.8rem;
+		line-height: 1.0;		
+	}
+	p{
+		/* space adjust between paragraphs */
+		margin-bottom: .9rem;
+	}	
+	.fpbutton{			
+		/* text size adjust */
+		padding: 1rem 1rem 1rem 1rem;	
+		font-size: 1.9rem;			
+	}
+} 
+
+
+/* begin responsive breakpoint adjusts   T-A-B-L-E-T-S (max-width:450px)  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+
+
+
+
+
+
+/* Breakpoint Mobile-landscape (and larger) min-width: 480px */
+@media (min-width: 1281px){
+
+
+}
+
+/* Breakpoint Tablet-portrait (and larger)  min-width: 768px */
+@media (min-width: 1281px){
+
+
+}
+
+/* Breakpoint Tablet-landscape (and larger) min-width: 992px */
+@media (min-width: 1281px){
+
+
+}
+
+/* Breakpoint Laptops (and larger) min-width: 1200px */
+@media (min-width: 1281px){
+
+
+}
