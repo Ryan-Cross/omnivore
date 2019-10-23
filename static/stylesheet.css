@@ -1,3 +1,4 @@
+/*#region meyerweb reset*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -47,10 +48,11 @@ table {
 	border-spacing: 0;
 }
 /* END MEYERWEB RESET @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/*#endregion meyerweb reset*/
 
 
 
-/* Default view no breakpoint	Mobile-portrait   works on iphoneX (375x812) */
+/* #region Default Mobile-portrait view no breakpoint   based on iphoneX (375x812) */
 
 /* Here set the documents root font-size for use with rem units (% relative to this set size) on text nodes */
 :root{
@@ -72,12 +74,24 @@ table {
 	background-size: cover;	
 }
 
+/* display: grid;
+	grid: 1.8fr 1.0fr 1fr 2fr/1fr; */
 #contents{
 	/* tracer here */
 	/* background-color: beige; */
 	height: inherit;	
 	display: grid;
-	grid: 1.8fr 1.0fr 1fr 2fr/1fr;
+	grid: 2.8fr 3fr/1fr;
+}
+
+#abovefold{
+	display: grid;
+	grid: 1.8fr 1.0fr /1fr;
+}
+
+#belowfold{
+	display: grid;
+	grid:  1fr 2fr/1fr;
 }
 
 .logoimage{	
@@ -94,6 +108,10 @@ table {
 	/* background-color: rgb(231, 231, 77); */
 	/* display: grid;
 	place-items: center; */	
+}
+
+#phoneimage{
+	display: none;
 }
 
 #openerdiv{
@@ -119,16 +137,25 @@ table {
 .openerbottom{
 	display: grid;
 	place-items: start center;
-	animation: appear 4s ease-in 1s 1 normal both;
+	opacity: 0;
+	
+	animation: appear 4s ease-in 2s 1 normal forwards,blinky 3s ease-in 9s infinite normal forwards; 
+	/* animation:appear 4s ease-in 1s 1 normal both; */
+	
+
+	/* animation:appear 4s ease-in 1s 1 normal both,blinky 3s ease-in 6s 4 both;  */
+	/* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 @keyframes appear{
-	0%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 100%;
-	}
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blinky{	
+	0%{	opacity: 1;}	
+	50%{opacity: .4}
+	100%{opacity: 1;}
 }
 
 #preamblediv{
@@ -175,18 +202,25 @@ table {
 	color: #000000;	
 	/* cursor: pointer;	 this is good but not on mobile */
 }
+/* #endregion */
 
 
-
-
-/* begin responsive breakpoint adjusts  PORTRAIT M-O-B-I-L-E (max-width:450px)  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-
-/* adjust grid for w320 and h568   this is 5s */
+/* #region responsive breakpoint for PORTRAIT M-O-B-I-L-E (max-width:450px) w320 and h568   this is 5s */
 @media screen and (max-width:450px) and (max-height:570px){
 		
 	#contents{		
 		display: grid;
-		grid: 1.0fr .1fr 1fr 1fr/1fr;
+		grid: 1..1fr 2fr/1fr;
+	}
+
+	#abovefold{
+		display: grid;
+		grid: 1.0fr .1fr  /1fr;
+	}
+	
+	#belowfold{
+		display: grid;
+		grid:  1fr 1fr/1fr;
 	}
 	
 	#openerdiv{		
@@ -210,12 +244,24 @@ table {
 	}
 }
 
+/* #endregion */
 
-/* adjust grid for portrait mobiles height 571px-750px pixel   this is iphone 6/7/8*   6/7/8+  */
+
+/* #region responsive breakpoint for PORTRAIT M-O-B-I-L-E (max-width:450px) height 571px-750px pixel   this is iphone 6/7/8*   6/7/8+  */
 @media screen and (max-width:450px) and  (min-height:571px) and (max-height:750px){
 	#contents{		
 		display: grid;
-		grid: 1.0fr .1fr 1fr 1.3fr/1fr;
+		grid: 1.4fr 2.3fr/1fr;
+	}
+
+	#abovefold{
+		display: grid;
+		grid: 1.0fr .1fr  /1fr;
+	}
+	
+	#belowfold{
+		display: grid;
+		grid:  1fr 1.3fr/1fr;
 	}
 	
 	#openerdiv{		
@@ -240,11 +286,24 @@ table {
 
 }
 
-/* adjust grid for portrait mobiles height >= 751px iphoneX, pixel phones etc */
+/* #endregion */
+
+
+/* #region responsive breakpoint for PORTRAIT M-O-B-I-L-E (max-width:450px) height >= 751px this is iphoneX, pixel phones etc */
 @media screen and (max-width:450px) and  (min-height:751px) {
 	#contents{		
 		display: grid;
-		grid: .9fr .3fr 1.0fr 1.1fr/1fr;
+		grid: 1.2fr 2.1fr/1fr;
+	}
+
+	#abovefold{
+		display: grid;
+		grid: .7fr .3fr /1fr;
+	}
+	
+	#belowfold{
+		display: grid;
+		grid:  1.0fr 1.1fr/1fr;
 	}
 	
 	#openerdiv{		
@@ -269,7 +328,10 @@ table {
 
 }
 
-/* begin responsive breakpoint adjusts  LANDSCAPE M-O-B-I-L-E (max-width:750px)  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
+/* #endregion */
+
+
+/* #region responsive breakpoint for LANDSCAPE M-O-B-I-L-E (max-width:750px)  */
 @media screen and (orientation:landscape) and (max-height:420px){
 	
 	#backboard{
@@ -282,8 +344,18 @@ table {
 	}
 	#contents{		
 		display: grid;
-		grid: 1fr 1fr/1fr 1fr;
+		grid: 1fr/1fr 1fr;
 		/* padding:1rem 0 1rem 0 ; */
+	}
+
+	#abovefold{
+		display: grid;
+		grid: 1fr 1fr /1fr;
+	}
+	
+	#belowfold{
+		display: grid;
+		grid:  1fr 1fr/1fr;
 	}
 
 	#logodiv{
@@ -297,10 +369,9 @@ table {
 		display: flex;
 		width: 40vw;
 		border-radius: 20px;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
-		
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);		
 	}
-
+	
 	#openerdiv{		
 		font-size: 2.5rem;			
 	}
@@ -320,34 +391,129 @@ table {
 	}
 } 
 
-
-/* begin responsive breakpoint adjusts   T-A-B-L-E-T-S (max-width:450px)  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& */
-
+/* #endregion */
 
 
 
 
 
-/* Breakpoint Mobile-landscape (and larger) min-width: 480px */
-@media (min-width: 1281px){
 
+
+
+/* #region responsive breakpoint for  C-O-M-P-U-T-E-R-S ( laptop and larger) min-width: 1200px */
+@media (min-width: 1000px){
+	#backboard{
+		width: 100vw;
+		height: 100vh;		
+	}
+
+	#contents{		
+		display: grid;
+		grid: 50vh 1fr/ 1fr;
+		/* place-items: center;	 */
+		background-color:white;
+	}
+
+	#abovefold{
+		display: grid;
+		grid: 1fr /18vw 1fr;
+	}
+	
+	#belowfold{
+		display: grid;
+		grid:  1fr /18vw 1fr;
+	}
+
+	#logodiv{		
+		background-color: rgba(48, 49, 53, 0.445);	
+		display: grid;
+		place-items: start;		
+	}
+
+	.logoimage{	
+		/* display: none; */
+
+		place-items: start;
+		width: 100%;
+	}
+										
+	.tinted-image {
+		background-image: 
+		  /* top, transparent red */
+		  linear-gradient(
+			rgba(255, 0, 0, 0.45), 
+			rgba(255, 0, 0, 0.45)
+		  ),
+		  /* your image */
+		  url(image.jpg);
+	  }
+
+	#openerdiv{	
+		font-size: 7rem;
+		margin:0rem;
+
+		background-image: 
+			/* top, transparent red */
+			linear-gradient(
+			rgba(255, 30, 30, 0.45), 
+			rgba(255, 30, 30, 0.75)
+			),
+			/* your image */
+			url("phonecroppedblur.png");		
+
+		background-size: 
+			cover,
+			auto 80%;		
+		background-position: center;
+		background-repeat: no-repeat;		
+				
+	}	
+
+	#buttonsdiv{		
+		background-color: rgba(48, 49, 53, 0.445);				
+		grid-column: 1;	
+		grid-row: 1;		
+	}
+
+	.fpbutton{			
+		padding: 1rem 1rem 1rem 1rem;	
+		box-sizing: content-box;
+		width: 15vw;		
+		font-size: 3rem;
+		
+		transition:all 0.15s ease-out;
+	}
+
+.fpbutton:hover{
+	
+	color: rgba(255, 30, 30);
+	transform: scale(1.2, 1.2) translate(4rem,0);	
+}
+
+
+
+	#preamblediv{
+		background:linear-gradient(
+			rgba(87, 83, 83, 0.00), 
+			rgba(87, 83, 83, 0.15)
+			);		
+		margin:0rem;
+		grid-column: 2;			
+	}
+	
+	.preambleparagraph{
+		font-family: 'Roboto Slab', serif;
+		font-weight: bold ;
+		
+		font-size: 4.2rem;
+		line-height: 1.5;
+		color: rgb(24, 22, 22);
+	
+		margin:0rem 1.6rem 0rem 1.6rem ;
+		padding: .2rem;	
+		margin-bottom: 1rem;
+	}
 
 }
 
-/* Breakpoint Tablet-portrait (and larger)  min-width: 768px */
-@media (min-width: 1281px){
-
-
-}
-
-/* Breakpoint Tablet-landscape (and larger) min-width: 992px */
-@media (min-width: 1281px){
-
-
-}
-
-/* Breakpoint Laptops (and larger) min-width: 1200px */
-@media (min-width: 1281px){
-
-
-}
+/* #endregion */
