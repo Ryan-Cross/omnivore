@@ -1,0 +1,162 @@
+/* #region Default Mobile-portrait view no breakpoint   based on iphoneX (375x812) */
+#backboard{
+    height: 200vh;
+    /* width: 100vw; */
+    max-width: 100%;
+    display: grid;
+    grid: 100px 1fr/ 1fr;    
+}
+
+#navbar{
+    height: 100px;
+    width: 100vw;
+    background-color: white;    
+    display: grid;
+    grid: 1fr/ 2fr 1fr;
+    position: fixed;  
+    top: 0;
+    left: 0;
+}
+
+#navlogo{
+    height: 80px;
+    place-self:  center start;
+    position: relative;
+    left: 10px;
+}
+
+#burger{
+    position: relative;
+    right: 10px;    
+    height: 35px;
+    place-self:  center end;   
+    
+    /* this is good but not on mobile */
+    cursor: pointer;	
+}
+
+#dropdown{
+    height: 400px;
+    width: 70vw;    
+    background: linear-gradient(180deg, rgba(218, 218, 218, 0.94) 0%, rgba(175, 175, 176, 0) 100%), #FFFFFF;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;    
+    display: none;
+    grid: 60px 6fr/1fr;
+    
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#closer{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+#buttonsdiv{
+	/* background-color: rgb(14, 124, 56); */
+    display: grid;
+    grid: 1fr 1fr 1fr 1fr/ 1fr;
+	place-items: center;
+}
+  
+.fpbutton{	
+	background: #FFFFFF;
+	box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	padding: 1rem 1rem 1rem 1rem;
+	box-sizing: content-box;
+	width: 50vw;
+	text-decoration: none;
+	font-family: Russo One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.2rem;	
+	text-align: center;
+	color: #000000;	
+    
+    /* this is good but not on mobile */
+    cursor: pointer;	 
+}
+
+
+
+#contents{
+    background-color: orange; 
+    font-size: 70px;   
+}
+
+/* #endregion */
+
+
+
+/* #region responsive breakpoint for PORTRAIT M-O-B-I-L-E (max-width:450px) w320 and h568   this is 5s */
+@media screen and (max-width:450px) and (max-height:570px){
+    #dropdown{
+        width: 60vw; 
+    }
+    
+    .fpbutton{	
+        width: 40vw;
+        font-size: 1rem;	    
+    }
+}
+
+
+/* #endregion */
+
+
+
+/* #region responsive breakpoint for PORTRAIT M-O-B-I-L-E (max-width:450px) height 571px-750px pixel   this is iphone 6/7/8*   6/7/8+  */
+
+@media screen and (max-width:450px) and  (min-height:571px) and (max-height:750px){
+
+
+}
+/* #endregion */
+
+
+
+/* #region responsive breakpoint for PORTRAIT M-O-B-I-L-E (max-width:450px) height >= 751px this is iphoneX, pixel phones etc */
+
+@media screen and (max-width:450px) and  (min-height:751px) {
+
+    
+}
+
+/* #endregion */
+
+
+
+/* #region responsive breakpoint for LANDSCAPE M-O-B-I-L-E (max-width:750px)  */
+@media screen and (orientation:landscape) and (max-height:420px){
+
+    #dropdown{
+        height: 300px;
+        width: 50vw;     
+    }
+    .fpbutton{	
+        width: 40vw;
+        font-size: 1rem;	    
+    }
+}
+
+
+/* #endregion */
+
+
+
+/* #region responsive breakpoint for  C-O-M-P-U-T-E-R-S ( laptop and larger) min-width: 1200px */
+
+@media (min-width: 1000px){
+
+
+}
+
+/* #endregion */
+
+
