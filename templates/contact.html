@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Make Contact</title>
+    <title>Omnivore Web Design Contact</title>
     <link rel="stylesheet" media="screen" href="\static\meyerReset.css">
     <link rel="stylesheet" media="screen" href="\static\contactstyle.css">
     <link href="https://fonts.googleapis.com/css?family=Rhodium+Libre|Roboto+Slab|Russo+One&display=swap" rel="stylesheet">
     <!--  USAGE AS:   font-family: 'Russo One', sans-serif;ont-family: 'Rhodium Libre', serif; font-family: 'Roboto Slab', serif; -->
+
+    <!-- Leaflet's CSS...from leaflet direct copy/paste -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+    <!-- Leaflet's JS (this is the mapping scroller/zoomer...from leaflet direct copy/paste...must be after leaflet's CSS) -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
     
 </head>
 <body>
@@ -24,17 +34,63 @@
             </div>
             <div id="dropdown">
                 <img src="\static\closeX.svg" id="closer" alt="x to close menu">
-                <div id="buttonsdiv">
-                    <a href="www.omnivorewebdesign.com"><button class="fpbutton">HOME</button></a>
-                    <a href="www.omnivorewebdesign.com"><button class="fpbutton">THE CASE FOR DIGITAL</button></a>
-                    <a href="www.omnivorewebdesign.com"><button class="fpbutton">GOOD, SIMPLE AND CHEAP</button></a>
-                    <a href="www.omnivorewebdesign.com"><button class="fpbutton">PORTFOLIO</button></a>
+                <div id="DDbuttonsdiv">
+                    <a href="www.omnivorewebdesign.com"><button class="DDbutton">HOME</button></a>
+                    <a href="www.omnivorewebdesign.com"><button class="DDbutton">THE CASE FOR DIGITAL</button></a>
+                    <a href="www.omnivorewebdesign.com"><button class="DDbutton">GOOD, SIMPLE AND CHEAP</button></a>
+                    <a href="www.omnivorewebdesign.com"><button class="DDbutton">PORTFOLIO</button></a>
                 </div>
             </div>
         </div>
         
+        
+
         <div id="contents">
-            contents @ 70px
+            
+            <div id="photosection" class="sectioned">
+                <div id="photoicon" class="iconcontainer">
+                    <img src="\static\photoicon.svg"  class="icon" alt="icon for photo">
+                </div>
+                <div id="photoframe" class="detailssection"> 
+                    <img src="\static\RyanCross 2.png" id="headshot" alt="Ryan Cross headshot">
+                    <p id="phototitle">Ryan Cross</p>                        
+                </div>                    
+            </div>
+
+            <div id="phonesection" class="sectioned">
+                <div id="phoneicon" class="iconcontainer">
+                    <img src="\static\phoneicon.svg" class="icon" alt="icon for phone number">
+                </div>
+                <div id="phonedetail">
+                    <a href="tel:+01-778-538-1334"><button class="detailssection linkable">1-778-538-1334</button></a>
+                </div>
+            </div>
+
+            <div id="mailsection" class="sectioned">
+                    <div id="mailicon" class="iconcontainer">
+                        <img src="\static\mailicon.svg" class="icon" alt="icon for email">
+                    </div>
+                    <div id="maildetail">
+                        <a href="mailto: omnivorewebdesign@gmail.com" target="_blank"><button class="detailssection linkable">omnivorewebdesign@gmail.com</button></a>
+                    </div>
+            </div>
+
+            <div id="mapsection" class="sectioned">
+                    <div id="mapicon"  class="iconcontainer">
+                        <img src="\static\mapicon.svg" class="icon" alt="icon for map">
+                    </div>
+                    
+                    <div id="mapdetail" class="detailssection">  
+                        <div id="themap">
+
+                        </div> 
+                        <div id="mapfullscreen" class="linkable">
+                                <a href="">take this map fullscreen</a> 
+                        </div>                        
+                    </div>
+            </div>
+
+
         </div>
         
     </div>
@@ -44,3 +100,4 @@
 
 </html>
 <script src="\static\dropdown.js" defer></script>
+<script src="\static\themapper.js" defer></script>
