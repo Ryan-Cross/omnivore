@@ -1,19 +1,118 @@
 /* #region Default Mobile-portrait view no breakpoint   based on iphoneX (375x812) */
 
 
+     /*                               contents from here                                   */
 #backboard{
     width: 100vw;
     max-width: 100%;
     height: 100vh;
     /* overflow:hidden;     */
     box-sizing: border-box;
-
     display: grid;
     grid: 100px 1fr/ 1fr;    
 }
 
+main{    
+    box-sizing: border-box;    
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 21.35%, #FFFFFF 88.02%), #E11E1E;
+    font-size: 2rem; 
+    display: grid;
+    grid: minmax(0,3fr) minmax(0,1fr) minmax(0,1fr) minmax(0,5fr)/100vw; 
+    /* max-height: 100%; */
+    /* width: 100vw; */
+    place-items: center start;
+}
 
-#navbar{
+section{
+    height: 100%;
+    width: 100%; 
+    display: grid;
+    grid: 1fr/1fr 6fr;    
+    place-items: center;
+}
+
+#photosection{
+    /* background-color: aqua;       */
+}
+#phonesection{
+    /* background-color:olive; */
+}
+#mailsection{
+    /* background-color:orangered; */
+}
+#mapsection{
+    /* background-color:palegoldenrod; */
+}
+
+
+.icon{
+    max-height: 40px;
+}
+
+.contents{
+    height: 90%;
+    width: 90%;  
+    
+    background: #FFFFFF;
+	box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	
+    box-sizing: border-box;
+    /* padding: 1rem 1rem 1rem 1rem; */
+    
+	font-family: Russo One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: .8rem;	
+	text-align: center;
+    color: #000000;	 
+
+    display: grid;
+    place-items: center;
+}
+
+#photoframe{
+ /* background-color: pink; */
+    display: grid;
+    grid: minmax(100px,10fr)  1fr/1fr;
+    place-items: center; 
+    padding: .3rem 1rem  .3rem 1rem; 
+}
+
+#headshot{
+    object-fit: contain;
+    max-height: 100%;
+    height: 100%;
+}
+
+a{
+    color: blue;
+    text-decoration-color: blue;
+}
+.buttonclass{
+    color: blue;
+    height: 100%;
+    width: 100%;  
+    border-width: 0px;
+}
+
+#mapframe{
+    display: grid;
+    grid: 1fr minmax(100px,10fr)/1fr;
+    place-items: center; 
+    padding: .3rem 1rem  .3rem 1rem; 
+}
+
+#themap{
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+
+  /*                               dropdown from here                                   */
+  #navbar{
     height: 100px;
     width: 100vw;
     max-width: 100%;
@@ -25,8 +124,6 @@
     top: 0;
     left: 0;
 }
-
-
 
 #navlogo{
     height: 80px;
@@ -55,6 +152,8 @@
     grid: 60px 6fr/1fr;
     
     position: fixed;
+    /* this next line is to keep the dropdown higher in stacking context than the leaflet map...i have no idea on leaflets z-index  */
+    z-index: 99999999999;
     top: 20px;
     right: 20px;
 }
@@ -91,83 +190,6 @@
     
     /* this is good but not on mobile */
     cursor: pointer;	 
-}
-
-     /*                               contents from here                                   */
-
-#contents{    
-    box-sizing: border-box;
-    padding: 10px 0 10px 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 21.35%, #FFFFFF 88.02%), #E11E1E;
-    font-size: 2rem; 
-    display: grid;
-    /* grid: 3fr 1fr 1fr 3fr/1fr;  */
-    max-height: 100%;
-}
-
-.icon{
-    max-height: 40px;
-}
-
-#photosection{
-    object-fit: contain;
-}
-
-#photoframe{
-    /* this grid needs a fixed height on that first cell or img collapses */
-    display: grid;
-    grid: 10fr 1fr/1fr;
-    place-items: center; 
-    padding: .3rem 1rem  .3rem 1rem;
-    
-}
-#headshot{
-    object-fit: contain;
-    max-height: 100%;
-    height: 100%;
-}
-
-.sectioned{
-    display: grid;
-    grid: 1fr/1fr 6fr;    
-    place-items: center;
-    /* padding: 0 0 10px 0; */
-}
-
-.detailssection{
-    background: #FFFFFF;
-	box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.5);
-	border-radius: 15px;
-	padding: 1rem 1rem 1rem 1rem;
-
-	box-sizing: content-box;
-	width: 70vw;
-
-	/* text-decoration: none; */
-	font-family: Russo One;
-	font-style: normal;
-	font-weight: normal;
-	font-size: .8rem;	
-	text-align: center;
-    color: #000000;	 
-  
-}
-
-.linkable{
-    color: blue;
-}
-
-#mapdetail{
-    display: grid;
-    grid:1fr 1rem/1fr;
-}
-
-#mapfullscreen{
-    font-size: 1rem;
-}
-
-#themap{
-    height: 200px;
 }
 
 /* #endregion */

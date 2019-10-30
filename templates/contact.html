@@ -44,54 +44,36 @@
         </div>
         
         
-
-        <div id="contents">
-            
-            <div id="photosection" class="sectioned">
-                <div id="photoicon" class="iconcontainer">
-                    <img src="\static\photoicon.svg"  class="icon" alt="icon for photo">
-                </div>
-                <div id="photoframe" class="detailssection"> 
+        <main>
+            <section id="photosection">
+                <img src="\static\photoicon.svg"  class="icon" alt="icon for photo">
+                <div id="photoframe" class="contents"> 
                     <img src="\static\RyanCross 2.png" id="headshot" alt="Ryan Cross headshot">
                     <p id="phototitle">Ryan Cross</p>                        
-                </div>                    
-            </div>
+                </div>  
+            </section>  
+                
+            <section  id="phonesection">
+                <img src="\static\phoneicon.svg" class="icon" alt="icon for phone number">
+                <a href="tel:+01-778-538-1334" class="contents" ><button class="contents buttonclass">1-778-538-1334</button></a>                
+            </section> 
 
-            <div id="phonesection" class="sectioned">
-                <div id="phoneicon" class="iconcontainer">
-                    <img src="\static\phoneicon.svg" class="icon" alt="icon for phone number">
-                </div>
-                <div id="phonedetail">
-                    <a href="tel:+01-778-538-1334"><button class="detailssection linkable">1-778-538-1334</button></a>
-                </div>
-            </div>
-
-            <div id="mailsection" class="sectioned">
-                    <div id="mailicon" class="iconcontainer">
-                        <img src="\static\mailicon.svg" class="icon" alt="icon for email">
-                    </div>
-                    <div id="maildetail">
-                        <a href="mailto: omnivorewebdesign@gmail.com" target="_blank"><button class="detailssection linkable">omnivorewebdesign@gmail.com</button></a>
-                    </div>
-            </div>
-
-            <div id="mapsection" class="sectioned">
-                    <div id="mapicon"  class="iconcontainer">
-                        <img src="\static\mapicon.svg" class="icon" alt="icon for map">
-                    </div>
+            <section  id="mailsection">
+                <img src="\static\mailicon.svg" class="icon" alt="icon for email">
+                <a href="mailto: omnivorewebdesign@gmail.com" class="contents" target="_blank"><button class="contents buttonclass">omnivorewebdesign@gmail.com</button></a>                 
+            </section>  
+            
+            <section id="mapsection" >
+                <img src="\static\mapicon.svg" class="icon" alt="icon for map">
                     
-                    <div id="mapdetail" class="detailssection">  
-                        <div id="themap">
-
-                        </div> 
-                        <div id="mapfullscreen" class="linkable">
-                                <a href="">take this map fullscreen</a> 
-                        </div>                        
-                    </div>
-            </div>
-
-
-        </div>
+                <div id="mapframe" class="contents">  
+                    <a href="#">take this map fullscreen</a> 
+                    <div id="themap">   </div> 
+                                            
+                </div>               
+            </section>  
+        </main>
+        
         
     </div>
     
