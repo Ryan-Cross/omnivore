@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Omnivore Web Design Portfolio</title>
+    <link rel="stylesheet" media="screen" href="\static\meyerReset.css">
+    <link rel="stylesheet" media="screen" href="\static\portfolio.css">
+    <link href="https://fonts.googleapis.com/css?family=Rhodium+Libre|Roboto+Slab|Russo+One&display=swap" rel="stylesheet">
+    <!--  USAGE AS:   font-family: 'Russo One', sans-serif;font-family: 'Rhodium Libre', serif; font-family: 'Roboto Slab', serif; -->
+
+    <!-- Leaflet's CSS...from leaflet direct copy/paste -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+    <!-- Leaflet's JS (this is the mapping scroller/zoomer...from leaflet direct copy/paste...must be after leaflet's CSS) -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    
+</head>
+<body>
+    
+    
+    <div id="backboard">
+        
+        <div id="navbarplace"> 
+            <!-- the sole purpose of div "navbarplace" is stacking context for the positioned navbar  -->
+            <div id="navbar">
+                <img src="\static\reddotomni.png" id="navlogo" alt="Omnivore web dev logo">
+                <img src="\static\burgermenu.svg" id="burger" alt="menu icon">
+            </div>
+            <div id="dropdown">
+                <img src="\static\closeX.svg" id="closer" alt="x to close menu">
+                <div id="DDbuttonsdiv">
+                    <a href="www.omnivorewebdesign.com" class="DDa"><button class="DDbutton">HOME</button></a>
+                    <a href="www.omnivorewebdesign.com" class="DDa"><button class="DDbutton">THE CASE FOR DIGITAL</button></a>
+                    <a href="www.omnivorewebdesign.com" class="DDa"><button class="DDbutton">GOOD, SIMPLE AND CHEAP</button></a>
+                    <a href="www.omnivorewebdesign.com" class="DDa"><button class="DDbutton">MAKE CONTACT</button></a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <main>
+            
+            <section id="omnivore" >
+                <h1>www.omnivorewebdesign.com</h1>
+                <p>This site has some great qualities you may not even know to look for.</p>
+
+                <ul>
+                    <li>This site is <b>responsive</b>. That means whatever device the viewer uses they have good utility on the site. Viewed with a laptop, a tablet or a smart phone the site will render correctly.                            
+                    </li>
+                    <li>The live map on the contacts page works through an <b>API</b>. An API is an interface with another part of the internet and that let's you embed content like youtube videos, weather feeds, stock tickers etc. 
+                    </li>
+                    <li>Theres some animations and a drop-down menu. <b>Active features</b> add some life to the design.  
+                    </li>
+                    <li>The <b>graphic design</b> for the logo is custom made. Unique graphics help set your site apart.  
+                    </li>
+                </ul>
+                <img src="\static\homepageomni.PNG" id="homepageomni" alt="screencap of omnivoe homepage">
+    
+            </section>
+        
+            <section id="trout" >
+                <a href="http://www.stillwatertrout.ca/">www.stillwatertrout.ca</a>
+                <p>This is a personal project related to my fishing hobby. There’s plenty of great <b>custom graphics</b> on this one.</p>
+                <p>I attached some <b>google analytics</b>  to this site and set it loose in the wild. It continues to build viewership internationally!</p>
+                <img src="/static\swtArt.svg" id="swtArt" alt="Graphics from SWT trout page">
+            </section>
+
+            <section id="github" >
+                <a href="https://github.com/Ryan-Cross?tab=repositories">github.com/Ryan-Cross</a>
+                <img src="\static\github 1.svg" id="githublogo" alt="the github logo">
+                <p>If you read code take a look at my github.</p>
+                <p>Heres the tech in my stack.</p>
+                <img src="\static\alltechicons.svg"  id="techicons" class="techicon" alt="">
+                
+            </section>
+            
+        </main>
+    
+    </div>
+    
+    
+</body>
+
+</html>
+<script src="\static\dropdown.js" defer></script>
