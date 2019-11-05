@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The case for digital</title>
+    <link rel="stylesheet" media="screen" href="\static\meyerReset.css">
+    <link rel="stylesheet" media="screen" href="\static\whyweb.css">
+    <link href="https://fonts.googleapis.com/css?family=Rhodium+Libre|Roboto+Slab|Russo+One&display=swap" rel="stylesheet">
+    <!--  USAGE AS:   font-family: 'Russo One', sans-serif;font-family: 'Rhodium Libre', serif; font-family: 'Roboto Slab', serif; -->
+
+    <!-- Leaflet's CSS...from leaflet direct copy/paste -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+    <!-- Leaflet's JS (this is the mapping scroller/zoomer...from leaflet direct copy/paste...must be after leaflet's CSS) -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    
+</head>
+<body>
+    
+    
+    <div id="backboard">
+        
+        <div id="navbarplace"> 
+            <!-- the sole purpose of div "navbarplace" is stacking context for the positioned navbar  -->
+            <div id="navbar">
+                <img src="\static\reddotomni.png" id="navlogo" alt="Omnivore web dev logo">
+                <img src="\static\burgermenu.svg" id="burger" alt="menu icon">
+            </div>
+            <div id="dropdown">
+                <img src="\static\closeX.svg" id="closer" alt="x to close menu">
+                <div id="DDbuttonsdiv">
+                    <a href="{{url_for('index')}}" class="DDa"><button class="DDbutton">HOME</button></a>
+                    <a href="{{url_for('contact')}}" class="DDa"><button class="DDbutton">MAKE CONTACT</button></a>
+                    <a href="{{url_for('cheap')}}" class="DDa"><button class="DDbutton">GOOD, SIMPLE AND CHEAP</button></a>
+                    <a href="{{url_for('portfolio')}}" class="DDa"><button class="DDbutton">PORTFOLIO</button></a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <main>
+            <section>
+                <h1>Get your message out there!</h1>
+                <p>
+                    Today people seeking information turn immediately to the web. They browse from their workstation at the office, they surf the web on their laptop or tablet at home and they don’t move without their cell phone.
+                </p>
+                <p>
+                    In Canada the average user spends <b>5 hours 55 minutes every day</b>  on the internet.
+                </p>
+            </section>
+            <img src="\static\digital-2019-canada-january-2019-v01-19-1024.jpg" class="infographic" alt="infographic canadian time on the internet">
+            
+            <section>
+                <h1>The web via smart phone</h1>
+                <p>When people go online it’s most often on their cell phone. The share of digital traffic coming via mobile continues to increase. People like to use their phones.                    
+                </p>
+            </section>
+            <img src="\static\digital-2019-canada-january-2019-v01-18-1024.jpg" class="infographic" alt="infographic ">
+            <img src="\static\digital-2019-canada-january-2019-v01-21-1024.jpg" class="infographic" alt="">
+            <section>
+                <h1>Web is best!</h1>
+                <p>
+                    So how will you get the word out?
+                </p>
+                <p>
+                    First you should put the information where they’re looking, on the web. A web site is a cheap and effective way to reach the broadest audience. 
+                </p>
+                <p>
+                    Second be prepared for visitors on mobile. You have to be sure that whatever device your audience is using to view your site is <b>responsive</b> . A responsive web design will adapt to the viewing port of the users device. It will look good on a smart phone, an ipad or a monitor.
+                </p>
+                <p>
+                    Get in touch and we can help you get on the web!
+                </p>
+                
+            </section>
+            
+            
+        </main>
+    
+    </div>
+    
+    
+</body>
+
+</html>
+<script src="\static\dropdown.js" defer></script>
