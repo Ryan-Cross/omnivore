@@ -25,6 +25,7 @@ main{
 
 section{
     height: 100%;
+    max-height: 100%;
     width: 100%; 
     display: grid;
     grid: 1fr/1fr 6fr;    
@@ -74,7 +75,7 @@ section{
 #photoframe{
  /* background-color: pink; */
     display: grid;
-    grid: minmax(100px,10fr)  1fr/1fr;
+    grid: minmax(1px,10fr)  1fr/1fr;
     place-items: center; 
     padding: .3rem 1rem  .3rem 1rem; 
 }
@@ -124,6 +125,8 @@ a{
     position: fixed;  
     top: 0;
     left: 0;
+    /* this next line is to keep the dropdown higher in stacking context than the leaflet map...i have no idea on leaflets z-index  */
+    z-index: 99999999998;
 }
 
 #navlogo{
