@@ -84,7 +84,7 @@ section{
 #headshot{
     object-fit: contain;
     max-height: 100%;
-    height: 10px;
+    height: 100%;
 }
 
 a{
