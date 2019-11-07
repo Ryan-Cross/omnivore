@@ -234,7 +234,7 @@ a{
 
 
 /* #region responsive breakpoint for PORTRAIT M-O-B-I-L-E (max-width:450px) and  (min-height:751px) this is iphoneX, pixel phones etc */
-@media screen and (orientation:portrait) and(max-width:450px) and  (min-height:751px) {	
+@media screen and (orientation:portrait) and (max-width:450px) and (min-height:751px) {	
         
     .contents{        
         font-size: .8rem;	
