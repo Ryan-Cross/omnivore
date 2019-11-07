@@ -65,13 +65,14 @@ table {
 	box-sizing: border-box;
 }
 
-#backboard{
-	max-width: 100%;
+#backboard{	
+	max-width: 100%;	
 	height: 100vh;
 
-	background-image: url("grayfpBG.svg");
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 42.71%, #FFFFFF 93.39%), #707070;
+	/* background-image: url("grayfpBG.svg");
 	background-repeat: no-repeat;
-	background-size: cover;	
+	background-size: cover;	 */
 }
 
 /* display: grid;
