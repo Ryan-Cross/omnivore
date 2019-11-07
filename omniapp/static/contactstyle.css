@@ -239,6 +239,9 @@ a{
     .contents{        
         font-size: .8rem;	
     }
+    #headshot{
+        height: 120px;
+    }
 
 }
 
@@ -280,7 +283,9 @@ a{
         height: 350px;
         grid: 50px 6fr/1fr;
     }	
-	
+	#headshot{
+        height: 120px;
+    }
 } 
 
 /* #endregion */
@@ -309,7 +314,9 @@ a{
     .icon{
         max-height: 100px;
     }
-    
+    #headshot{
+        height: 150px;
+    }
 }
 
 /* #endregion */
@@ -333,6 +340,9 @@ a{
 
     .icon{
         max-height: 100px;
+    }
+    #headshot{
+        height: 90px;
     }
 }
 
@@ -382,7 +392,9 @@ a{
         max-height: 200px;
         height: 80px;
     }    
-
+    #headshot{
+        height: 300px;
+    }
 
 }
 
