@@ -27,3 +27,7 @@ def portfolio():
 @app.route('/whyweb')
 def whyweb():
     return render_template("whyweb.html")
+
+@app.route('/maponly')
+def maponly():
+    return render_template("maponly.html")
